@@ -1,18 +1,17 @@
 import React from 'react'
 import Profile from './componentes/profile';
+import Login from './componentes/login'
 import { useAuth } from './providers/auth';
 
 function App() {
-  const { user, setUser } = useAuth()
+  const { user } = useAuth()
   console.log(user)
 
   return (
     <div className="App">
         <h1>Olá Mundo!</h1>
-        <input type="text" onChange={(e) => setUser({name: e.target.value})} />
-        
-        <hr/>
         <Profile />
+        <Login />
     </div>
   );
 }
