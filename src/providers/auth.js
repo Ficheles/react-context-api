@@ -15,3 +15,6 @@ export const AuthProvider = (props) => {
         </AuthContext.Provider>
     )
 }
+
+// Criar um Hook
+export const useAuth = () =>  React.useContext(AuthContext)
